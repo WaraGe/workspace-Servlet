@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>form1</title>
+</head>
+<body>
+	<form action="">
+		<input type="text" name="name" placeholder="이름">
+		<input type="tel" name="phone" placeholder="연락처">
+		<input type="email" name="email" placeholder="이메일">
+		<input type="text" name="address" placeholder="주소">
+		<input type="tel" name="phone" placeholder="연락처">
+	</form>
+</body>
+</html>

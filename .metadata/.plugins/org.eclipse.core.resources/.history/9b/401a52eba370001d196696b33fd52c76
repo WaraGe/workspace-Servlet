@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>테 스 트</title>
+</head>
+<body>
+	<h1>테스트1 페이지</h1>
+	<a href="req/1?test=10&name=이성욱">요청</a>
+<!-- 	<a href="/req/1?test=10&name=이성욱">요청</a> -->
+</body>
+</html>

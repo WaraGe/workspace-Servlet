@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>테 스 트</title>
+</head>
+<body>
+	<h1>테스트1 페이지</h1>
+	<!-- <a href="req/1?test=10&name=이성욱">요청</a> -->  <!-- 상대경로  -->
+	<!-- 	<a href="/req/1?test=10&name=이성욱">요청</a> --> <!-- 절대경로 -->
+	<a href="/req/1?test=10&name=이성욱">요청</a> <!-- href주소창으로 날라갔기 때문에 get요청이다 -->
+
+</body>
+</html>
