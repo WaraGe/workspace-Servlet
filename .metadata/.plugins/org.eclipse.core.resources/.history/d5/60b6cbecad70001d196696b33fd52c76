@@ -44,10 +44,10 @@ public class FormApi1 extends HttpServlet {
 //		getParameter는 String(문자열)타입이기때문에 숫자로 사용하고싶다면 문자열로 변환을 해줘야함.
 		
 		response.getWriter().print("name: " + name);
-		response.getWriter().print("phone: " + phone);
-		response.getWriter().print("email: " + email);
-		response.getWriter().print("address: " + address);
-		response.getWriter().print("password: " + password);
+		response.getWriter().print("name: " + phone);
+		response.getWriter().print("name: " + email);
+		response.getWriter().print("name: " + address);
+		response.getWriter().print("name: " + password);
 
 		
 	}
