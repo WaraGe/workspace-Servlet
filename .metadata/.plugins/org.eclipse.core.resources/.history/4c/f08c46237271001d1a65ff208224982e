@@ -1,0 +1,24 @@
+package com.study.servlet.cookie;
+
+import java.io.IOException;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.Cookie;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+@WebServlet("/cookie/1")
+public class Cookie2 extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+       
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+		Cookie chocolateCookie = new Cookie("data1", "쿠키저장!");
+		chocolateCookie.setMaxAge(60 * 60); // 1시간	
+		response.addCookie(chocolateCookie);
+//		쿠키는 클라이언트에 있음 서버는 response(응답)할때 쿠키를 옮길 수 있음
+//		요청때 쿠키저장소에서 쿠키를 꺼내볼수있음
+	}
+
+}
