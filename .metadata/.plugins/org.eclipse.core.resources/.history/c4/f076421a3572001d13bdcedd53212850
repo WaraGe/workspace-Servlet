@@ -1,0 +1,22 @@
+package com.study.repository;
+
+import java.util.List;
+
+import com.study.domain.User;
+
+public class UserRepository {
+	// 싱글콘
+	private static UserRepository instance = null; 
+	private List<User> userlist;
+	
+	private UserRepository() {}
+	
+	public static UserRepository getInstance() {
+		if(instance == null) {
+			instance = new UserRepository();
+		}
+		return instance;
+	}
+	
+	
+}

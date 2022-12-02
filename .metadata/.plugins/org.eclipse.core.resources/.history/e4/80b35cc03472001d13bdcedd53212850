@@ -1,0 +1,9 @@
+package com.study.repository;
+
+import java.util.List;
+
+import com.study.domain.User;
+
+public class UserRepository {
+	private List<User>
+}
