@@ -10,6 +10,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import com.study.domain.User;
 import com.study.service.AccountService;
@@ -28,17 +29,28 @@ public class LoginApi extends HttpServlet {
 		if(user == null) {
 			System.out.println("아이디 틀림");
 			//error_login -> script : 사용자 정보를 확인해주세요. history.back(); 뒤로가기 - 로그인창으로 돌려줌
-			
+			request.getRequestDispatcher("/WEB-INF/account/error_login.html").forward(request, response);
 			return;
-		}
+		}	
 		if (!accountService.checkPassword(user, loginUser.get("password"))) {
 			System.out.println("비밀번호 틀림!");
 			//error_login -> script : 사용자 정보를 확인해주세요. history.back(); 뒤로가기 - 로그인창으로 돌려줌
-			
+			request.getRequestDispatcher("/WEB-INF/account/error_login.html").forward(request, response);
 			return;
 		}
 		
 		// 로그인 성공
+		HttpSession session = request.getSession();
+		session.setAttribute("principal", user);
+		
+		response.sendRedirect("/mypage");
+		
+		
+		
+		
+		
+		
+		
 		
 		
 //		System.out.println(DTO.getParams(request)); //parameter를 map으로 바꿔줌 (dto)

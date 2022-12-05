@@ -1,0 +1,48 @@
+package com.study.filter;
+
+import java.io.IOException;
+import javax.servlet.Filter;
+import javax.servlet.FilterChain;
+import javax.servlet.FilterConfig;
+import javax.servlet.ServletException;
+import javax.servlet.ServletRequest;
+import javax.servlet.ServletResponse;
+import javax.servlet.annotation.WebFilter;
+import javax.servlet.http.HttpFilter;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+// 로그인이 될때만 mypage에 들어가는 filter
+import javax.servlet.http.HttpSession;
+
+@WebFilter("/*")
+public class SecurityFilter extends HttpFilter implements Filter {
+       
+	private static final long serialVersionUID = 1L;
+
+	public void destroy() {}
+
+	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
+		
+		HttpServletRequest req = (HttpServletRequest) request;
+		HttpServletResponse resp = (HttpServletResponse) response;
+		
+		String requestURI = req.getRequestURI();
+		String antMatchers = "/mypage, /mypage/password";
+		
+		if(antMatchers.contains(requestURI)) {
+			
+		}
+	
+		
+		
+		chain.doFilter(request, response);
+	}
+	private boolean authorization(HttpSession session) {
+		return (String)session.getAttribute("printcinal");
+	}
+
+	public void init(FilterConfig fConfig) throws ServletException {
+		
+	}
+
+}

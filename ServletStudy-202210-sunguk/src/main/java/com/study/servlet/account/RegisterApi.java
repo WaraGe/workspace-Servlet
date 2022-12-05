@@ -37,6 +37,7 @@ public class RegisterApi extends HttpServlet {
 			.password(registerParams.get("password"))
 			.name(registerParams.get("name"))
 			.email(registerParams.get("email"))
+			.roles("ROLE_USER, ROLE_ADMIN")
 			.build();
 		
 //			UserRepository.getInstance().saveUser(user);
@@ -44,7 +45,7 @@ public class RegisterApi extends HttpServlet {
 		
 		UserRepository.getInstance().ShowUserAll();
 		
-		response.sendRedirect("/login"); //sendRedirect?
+		response.sendRedirect("/login"); //sendRedirect 강제로 ()이동(서버에서)
 		
 	}
 

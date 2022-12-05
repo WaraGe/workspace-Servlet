@@ -19,7 +19,7 @@ public class EncodingFilter extends HttpFilter implements Filter {
 
 
 	public void destroy() {}
-
+                                //     ↓ upcasting
 	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
 
 		HttpServletRequest hsr = (HttpServletRequest) request; // 다운캐스팅

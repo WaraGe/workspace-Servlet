@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;error_username.html&apos; to &apos;error_username.html&apos;&#x0D;&#x0A;- Original project: &apos;ServletStudy-202210-sunguk&apos;&#x0D;&#x0A;- Destination element: &apos;error_username.html&apos;&#x0D;&#x0A;- Original element: &apos;error_username.html&apos;" description="Copy file" element1="src/main/webapp/WEB-INF/account/error_username.html" files="1" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1670236426235" target="/ServletStudy-202210-sunguk/src/main/webapp/WEB-INF/account/error_username.html" units="0" version="1.0"/>
+</session>
