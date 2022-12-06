@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Ajax</title>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
+	<!-- ajax사용방법 -> jquery사용 필수  -->
+</head>
+<body>
+	<input type="text" class="address1"> <!-- 부산광역시 -->
+	<input type="text" class="address2"> <!-- 동래구 -->
+	<input type="text" class="address3"> <!-- 중앙대로 1285번길 -->
+	<button type="button" class="submit-button">즌송</button>
+
+	<script type="text/javascript">
+		
+	</script>
+</body>
+</html>
