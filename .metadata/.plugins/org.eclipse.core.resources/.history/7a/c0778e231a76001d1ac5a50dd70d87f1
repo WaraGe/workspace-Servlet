@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Ajax-phone</title>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
+</head>
+<body>
+	<input type="text" class="phonenum1">
+	<input type="text" class="phonenum2"> 
+	<input type="text" class="phonenum3"> 
+	<button type="button" class="submit-button">전송~</button>
+
+	<script type="text/javascript">
+		const submitB = document.querySelector(".submit-button");
+		submitB.onclick = () => {
+			
+			let phonenum = {
+			phonenum1 : document.querySelector(".phonenum1").value,
+			phonenum2 : document.querySelector(".phonenum2").value,
+			phonenum3 : document.querySelector(".phonenum3").value
+		}
+
+		
+		$.ajax({
+				async: false,
+				type: "post",
+				url:"/api/ajax3",
+				data: {
+					jsonData: JSON.stringify(address)},
+				dataType: "text",
+				success: response => {
+					alert(response);
+					
+					let obj = JSON.parse(response);
+				
+					console.log(obj.phonenum1);
+					console.log(obj.phonenum2);
+					console.log(obj.phonenum3);
+				},
+				error: function(response) {
+					alert("요청 실패");
+				}
+			});
+		}
+		
+		alert("전송완료");
+	</script>
+</body>
+</html>

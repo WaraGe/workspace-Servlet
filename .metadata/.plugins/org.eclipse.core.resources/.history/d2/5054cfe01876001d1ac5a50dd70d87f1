@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
+</head>
+<body>
+	<input type="text" class="phone1">
+	<input type="text" class="phone2">
+	<input type="text" class="phone3">
+	<button type="button" class="submit"></button>
+
+</body>
+</html>

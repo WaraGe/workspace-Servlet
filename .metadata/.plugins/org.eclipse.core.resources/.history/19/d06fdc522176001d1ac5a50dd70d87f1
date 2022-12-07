@@ -1,0 +1,13 @@
+package com.study.util;
+
+public class StringBuilderTest {
+
+	public static void main(String[] args) {
+//		stringbuilder 사용하는 이유
+		String str = "문자열1";
+		
+		System.out.println(str);
+
+	}
+
+}

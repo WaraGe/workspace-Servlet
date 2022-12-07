@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>phone</title>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
+</head>
+<body>
+	<input type="text" class="phone">
+	<input type="text" class="phone"> 
+	<input type="text" class="phone"> 
+	<button type="button" class="submit-button">전송~</button>
+
+	<script type="text/javascript">
+		const submitB = document.querySelector(".submit-button");
+		
+		submitB.onclick = () => {
+			const phones = doucument.querySelector(".phone");
+			
+			let phonenum = {
+			phone1 : phone[0].value,
+			phone2 : phone[1].value,
+			phone3 : phone[2].value
+		}
+
+		
+	/* 	let requestData = {
+				data= JSON.stringify(phoneNumber)
+			} */
+			
+		$.ajax({
+			async : false,
+			type:"post",
+			url:"/api/ajax4",
+			data: {
+				data: JSON.stringify(phoneNumber)
+			},
+			dataType:"text",
+			success: response => {
+				alert(response);
+			},
+			error: response => {
+				alert("전송 실패");
+			}
+			});
+		}
+		
+		alert("전송완료");
+	</script>
+</body>
+</html>
